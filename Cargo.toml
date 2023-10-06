@@ -1,0 +1,44 @@
+[package]
+edition = "2021"
+name = "akt-mhns"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
+napi = { version = "2.12.2", features = ["full"] }
+napi-derive = { version = "2.12.2", features = ["full"] }
+hyper = { version = "0.14", features = [
+    "tcp",
+    "http1",
+    "http2",
+    "server",
+    "stream",
+] }
+serde = "1"
+serde_derive = "1"
+serde_json = "1"
+tokio = { version = "1", features = [
+    "fs",
+    "macros",
+    "io-std",
+    "io-util",
+    "rt",
+    "rt-multi-thread",
+    "sync",
+    "time",
+    "test-util",
+] }
+rand = "0.8.5"
+lazy_static = "1"
+
+[build-dependencies]
+napi-build = "2.0.1"
+
+[profile.release]
+lto = true
+
+[target.'cfg(all(target_arch = "x86_64", not(target_env = "musl")))'.dependencies]
+mimalloc = { version = "0.1" }

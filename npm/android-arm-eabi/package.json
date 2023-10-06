@@ -1,0 +1,18 @@
+{
+  "name": "akt-mhns-android-arm-eabi",
+  "version": "0.0.0",
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "main": "akt-mhns.android-arm-eabi.node",
+  "files": [
+    "akt-mhns.android-arm-eabi.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}

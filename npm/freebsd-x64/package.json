@@ -1,0 +1,18 @@
+{
+  "name": "akt-mhns-freebsd-x64",
+  "version": "0.0.0",
+  "os": [
+    "freebsd"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "akt-mhns.freebsd-x64.node",
+  "files": [
+    "akt-mhns.freebsd-x64.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}

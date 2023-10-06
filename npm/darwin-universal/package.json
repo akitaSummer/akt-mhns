@@ -1,0 +1,15 @@
+{
+  "name": "akt-mhns-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "akt-mhns.darwin-universal.node",
+  "files": [
+    "akt-mhns.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
